@@ -37,3 +37,5 @@ y_pred=pac.predict(tfidf_test)
 score=accuracy_score(y_test,y_pred)
 print(f'Accuracy: {round(score*100,2)}%')
 
+#DataFlair - Build confusion matrix
+confusion_matrix(y_test,y_pred, labels=['FAKE','REAL'])
