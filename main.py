@@ -20,3 +20,11 @@ labels.head()
 
 #DataFlair - Split the dataset
 x_train,x_test,y_train,y_test=train_test_split(df['text'], labels, test_size=0.2, random_state=7)
+
+#DataFlair - Initialize a TfidfVectorizer
+tfidf_vectorizer=TfidfVectorizer(stop_words='english', max_df=0.7)
+
+#DataFlair - Fit and transform train set, transform test set
+tfidf_train=tfidf_vectorizer.fit_transform(x_train) 
+tfidf_test=tfidf_vectorizer.transform(x_test)
+
